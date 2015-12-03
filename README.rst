@@ -5,7 +5,13 @@ Note: in-class quizlets will be answered `here <https://docs.google.com/forms/d/
 
 These data structures tutorials were taken from the CPython Web site
 (http://www.python.org) and were then lightly edited by Titus Brown.
-See `the tutorial introduction <https://docs.python.org/3.5/tutorial/introduction.html>`__ and `the data structures tutorial <https://docs.python.org/3.5/tutorial/datastructures.html>`__ for the original.
+See `the tutorial introduction
+<https://docs.python.org/3.5/tutorial/introduction.html>`__, the
+`control flows tutorial
+<https://docs.python.org/3.5/tutorial/controlflow.html#if-statements>`__,
+and `the data structures tutorial
+<https://docs.python.org/3.5/tutorial/datastructures.html>`__ for the
+originals.
 
 **********************************
 An Informal Introduction to Python
@@ -440,6 +446,145 @@ example::
    'b'
 
 .. _tut-firststeps:
+
+
+`if` Statements
+---------------
+
+Perhaps the most well-known statement type is the `if` statement.  For
+example::
+
+   >>> x = int(input("Please enter an integer: "))
+   Please enter an integer: 42
+   >>> if x < 0:
+   ...     x = 0
+   ...     print('Negative changed to zero')
+   ... elif x == 0:
+   ...     print('Zero')
+   ... elif x == 1:
+   ...     print('Single')
+   ... else:
+   ...     print('More')
+   ...
+   More
+
+There can be zero or more `elif` parts, and the `else` part is
+optional.  The keyword '`elif`' is short for 'else if', and is useful
+to avoid excessive indentation.  An  `if` ... `elif` ...
+`elif` ... sequence is a substitute for the ``switch`` or
+``case`` statements found in other languages.
+
+
+.. _tut-for:
+
+`for` Statements
+----------------
+
+The `for` statement in Python differs a bit from what you may be used
+to in C or Pascal.  Rather than always iterating over an arithmetic progression
+of numbers (like in Pascal), or giving the user the ability to define both the
+iteration step and halting condition (as C), Python's `for` statement
+iterates over the items of any sequence (a list or a string), in the order that
+they appear in the sequence.  For example (no pun intended):
+
+.. One suggestion was to give a real C example here, but that may only serve to
+   confuse non-C programmers.
+
+::
+
+   >>> # Measure some strings:
+   ... words = ['cat', 'window', 'defenestrate']
+   >>> for w in words:
+   ...     print(w, len(w))
+   ...
+   cat 3
+   window 6
+   defenestrate 12
+
+If you need to modify the sequence you are iterating over while inside the loop
+(for example to duplicate selected items), it is recommended that you first
+make a copy.  Iterating over a sequence does not implicitly make a copy.  The
+slice notation makes this especially convenient::
+
+   >>> for w in words[:]:  # Loop over a slice copy of the entire list.
+   ...     if len(w) > 6:
+   ...         words.insert(0, w)
+   ...
+   >>> words
+   ['defenestrate', 'cat', 'window', 'defenestrate']
+
+
+.. _tut-range:
+
+The `range` Function
+--------------------
+
+If you do need to iterate over a sequence of numbers, the built-in function
+`range` comes in handy.  It generates arithmetic progressions::
+
+    >>> for i in range(5):
+    ...     print(i)
+    ...
+    0
+    1
+    2
+    3
+    4
+
+The given end point is never part of the generated sequence; ``range(10)`` generates
+10 values, the legal indices for items of a sequence of length 10.  It
+is possible to let the range start at another number, or to specify a different
+increment (even negative; sometimes this is called the 'step')::
+
+    range(5, 10)
+       5 through 9
+
+    range(0, 10, 3)
+       0, 3, 6, 9
+
+    range(-10, -100, -30)
+      -10, -40, -70
+
+To iterate over the indices of a sequence, you can combine `range` and
+`len` as follows::
+
+   >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
+   >>> for i in range(len(a)):
+   ...     print(i, a[i])
+   ...
+   0 Mary
+   1 had
+   2 a
+   3 little
+   4 lamb
+
+In most such cases, however, it is convenient to use the `enumerate`
+function, see `tut-loopidioms`.
+
+A strange thing happens if you just print a range::
+
+   >>> print(range(10))
+   range(0, 10)
+
+In many ways the object returned by `range` behaves as if it is a list,
+but in fact it isn't. It is an object which returns the successive items of
+the desired sequence when you iterate over it, but it doesn't really make
+the list, thus saving space.
+
+We say such an object is *iterable*, that is, suitable as a target for
+functions and constructs that expect something from which they can
+obtain successive items until the supply is exhausted. We have seen that
+the `for` statement is such an *iterator*. The function `list`
+is another; it creates lists from iterables::
+
+
+   >>> list(range(5))
+   [0, 1, 2, 3, 4]
+
+Later we will see more functions that return iterables and take iterables as argument.
+
+
+.. _tut-break:
 
 Data Structures
 ---------------

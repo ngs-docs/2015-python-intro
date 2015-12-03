@@ -4,6 +4,9 @@ An Introduction to Python
 Next lessons
 ------------
 
+(These are a subset of the Data Carpentry python-for-ecologists
+lessons, `available here <http://www.datacarpentry.org/python-ecology/>`__.)
+
 `Starting with Data (DataFrames and Pandas) <https://github.com/ngs-docs/2015-python-intro/blob/master/01-starting-with-data.md>`__
 
 `Indexing, Slicing, and Subsetting DataFrames in Python <https://github.com/ngs-docs/2015-python-intro/blob/master/02-index-slice-subset.md>`__

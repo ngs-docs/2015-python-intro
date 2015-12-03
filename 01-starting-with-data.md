@@ -102,22 +102,11 @@ Pandas using the nickname `pd`.
 import pandas as pd
 ```
 
-Let's also import the [OS Library](https://docs.python.org/2/library/os.html). This library allows us to make sure we are
-in the correct working directory. If you are working in
-IPython Notebook, be sure to start the notebook in the workshop repository.
-If you didn't do that you can always set the working directory using the code
-below.
-
-```python
-import os
-os.getcwd()
-# if this directory isn't right, use the command below to set the working directory
-os.chdir("YOURPathHere")
-```	
+Now, load some data from a URL (you can provide a pathname here, too:
 
 ```python
 # note the pd.read_csv is used because we imported pandas as pd
-pd.read_csv("data/surveys.csv")
+pd.read_csv("https://raw.githubusercontent.com/ngs-docs/2015-python-intro/master/data/surveys.csv")
 ```
 
 The above command yields the **output** below:
@@ -151,7 +140,7 @@ variable name by assigning a value to it using `=`.
 Let's call the imported survey data `surveys_df`:
 
 ```python
-surveys_df = pd.read_csv("data/surveys.csv")
+surveys_df = pd.read_csv("https://raw.githubusercontent.com/ngs-docs/2015-python-intro/master/data/surveys.csv")
 ```
 
 Notice when you assign the imported dataframe to a variable, python does not
@@ -327,13 +316,18 @@ sorted = surveys_df.groupby('sex')
 ```
 
 The pandas function `describe` will return descriptive stats including: mean,
-median, max, min, std and count for a particular column in the data. Pandas
+median, max, min, std and count for a particular column in the data. The Pandas
 `describe` function will only return summary values for columns containing
 numeric data.
 
 ```python
 # summary statistics for all numeric columns by sex
 sorted.describe()
+```
+
+and
+
+```python
 # provide the mean for each numeric column by sex
 sorted.mean()
 ```
@@ -439,6 +433,10 @@ total_count=surveys_df.record_id.groupby(surveys_df['plot']).nunique()
 # let's plot that too
 total_count.plot(kind='bar');
 ```
+
+# Next lesson
+
+Go to [Indexing, Slicing, and Subsetting Data Frames in Python](https://github.com/ngs-docs/2015-python-intro/blob/master/02-index-slice-subset.md)
 
 # Challenge Activities
 

@@ -16,7 +16,7 @@ For now, we'll just use a simple statement to load the surveys data.
 
 ```python
 import pandas as pd
-df = pd.read_csv('data/surveys.csv', index_col='record_id')
+df = pd.read_csv("https://raw.githubusercontent.com/ngs-docs/2015-python-intro/master/data/surveys.csv", index_col='record_id')
 ```
 
 Matplotlib has a wide variety of plots that it can produce. First, we'll introduce the simplest of plots: the 2 dimensional line plot.
@@ -55,6 +55,8 @@ The data has now been plotted, to see it we can do 2 things:
 plt.show()
 ```
 
+-- but this is actually done automatically in IPython Notebook.
+
 2. Or we can save the plot to a file using `plt.savefig` like so:
 
 ```python
@@ -72,6 +74,7 @@ plt.savefig('myplot.pdf')
 What's a plot without a title, axis labels, and a legend? These can be easily set like so:
 
 ```python
+plt.plot(plot_data, label='My Data')
 plt.xlabel('Index')
 plt.ylabel('Plot Value')
 plt.title('The Plot Value From surveys.csv')
@@ -335,3 +338,8 @@ plt.legend()
 
 This is a basic tutorial to get you started using Python to make your graphs. For more information on Matplotlib, visit the official site: http://matplotlib.org/
 
+You might be particularly interested in [the matplotlib gallery](http://matplotlib.org/gallery.html)!
+
+# This is the End
+
+[Go back](./README.rst)

@@ -1,6 +1,8 @@
 An Introduction to Python
 =========================
 
+Note: in-class quizlets will be answered `here <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__.
+
 Next lessons
 ------------
 

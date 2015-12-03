@@ -18,7 +18,6 @@ What does this print out?
 
 4. b
 
-`Enter answer. <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__
 
 .
 
@@ -50,7 +49,6 @@ If you executed the following code, what would be printed out? ::
 
 4. go away, mahalo
 
-`Enter answer. <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__
 .
 .
 .
@@ -82,4 +80,3 @@ If you executed the following code, what would be printed out? ::
 
 4. go away, mahalo
 
-`Enter answer. <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__

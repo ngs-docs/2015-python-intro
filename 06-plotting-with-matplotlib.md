@@ -342,4 +342,4 @@ You might be particularly interested in [the matplotlib gallery](http://matplotl
 
 # This is the End
 
-[Go back](./README.rst)
+[Go back.](./README.rst)

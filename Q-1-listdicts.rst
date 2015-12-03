@@ -12,7 +12,6 @@ titus, how do I retrieve that value?
 
 4. d.instructor
 
-`Enter answer. <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__
 
 .
 .
@@ -33,7 +32,6 @@ should be used for storing names for taking classroom attendance?
 
 4. tuple
 
-`Enter answer. <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__
 .
 .
 .
@@ -53,7 +51,6 @@ should be used for storing all available colors for plotting?
 
 4. tuple
 
-`Enter answer. <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__
 .
 .
 .
@@ -73,7 +70,6 @@ should be used for storing names and associated phone numbers?
 
 4. tuple
 
-`Enter answer. <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__
 .
 .
 .
@@ -93,4 +89,3 @@ should be used for storing genes and their expression levels?
 
 4. tuple
 
-`Enter answer. <https://docs.google.com/forms/d/1EsTbkRrh-E1YuXGJAXSnSby8rbXHriL5l4O5XNhm0rU/viewform>`__

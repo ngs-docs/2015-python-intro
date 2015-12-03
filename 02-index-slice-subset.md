@@ -29,7 +29,8 @@ exercise. Let's reopen it:
 # first make sure pandas is loaded
 import pandas as pd
 # read in the survey csv
-surveys_df = pd.read_csv("surveys.csv")
+
+surveys_df = pd.read_csv("https://raw.githubusercontent.com/ngs-docs/2015-python-intro/master/data/surveys.csv")
 ```
 
 # Indexing & Slicing in Python
@@ -68,8 +69,14 @@ order. This is useful when we need to reorganize our data.
 ```python
 # select the species and plot columns from the DataFrame
 surveys_df[['species', 'plot']]
+```
+
+```python
 # what happens when you flip the order?
 surveys_df[['plot', 'species']]
+```
+
+```python
 #what happens if you ask for a column that doesn't exist?
 surveys_df['speciess']
 
@@ -399,3 +406,8 @@ for weight.
    or female and where weight values are greater than 0. Create a stacked bar
    plot of average weight by plot with male vs female values stacked for each
    plot.
+
+
+# Next lesson
+
+Go to [Plotting with matplotlib](https://github.com/ngs-docs/2015-python-intro/blob/master/06-plotting-with-matplotlib.md)
